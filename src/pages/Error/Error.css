@@ -1,0 +1,55 @@
+.error-404 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #bda4a4;
+    background: linear-gradient(70deg, #ecc5c5, rgb(230, 194, 174));
+    padding: 50px 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background-color: #f4f4f4;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    padding: 20px;
+    margin-top: 60px;
+}
+
+.bDog{
+    width: 300px;
+}
+
+.container h1 {
+    font-size: 10rem;
+    color: rgb(255, 189, 114);
+    font-size: 15rem;
+}
+
+.container p {
+    font-size: 2rem;
+    color: #444;
+    margin-bottom: 1rem;
+}
+
+.container button {
+    background-color: rgb(255, 189, 114);
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    margin-bottom: 1rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
+.container button:hover {
+    background-color: rgb(122, 101, 101);
+}
+

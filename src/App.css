@@ -1,3 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright&family=Merienda+One&display=swap');
+
+*, ::before, ::after{
+  box-sizing: border-box;
+  margin: 0; padding: 0;
+  font-family: 'Cormorant Upright', serif;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Merienda One', cursive;
+  font-weight: 800;
+}
+
 .App {
   text-align: center;
 }

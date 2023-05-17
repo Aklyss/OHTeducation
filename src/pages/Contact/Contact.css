@@ -1,0 +1,145 @@
+.form__back {
+    width: 100vw;
+    height: calc(100vh - 120px);
+    background-image: url("../../images/source/fondFormulaire.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.form__front {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    background-color: #faf0e7;
+    margin-top: 60px;
+    margin-bottom: 10px;
+    max-width: 1100px;
+    min-width: 300px;
+    width: 80%;
+}
+
+.form__l {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 45%;
+    padding: 3%;
+    background-color: rgb(255, 209, 157);
+}
+
+.form__l h1{
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.form__r {
+    width: 100%;
+    height: 55%;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.lab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.contact__sousTitre{
+    font-size: 30px;
+}
+.contact__par {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.champs {
+    width: 300px;
+    height: 30px;
+    max-width: 80%;
+    padding: 5px;
+    font-size: 18px;
+}
+
+.demande {
+    height: 60px;
+    resize: none;
+}
+
+.bouton {
+    margin-top: 10px;
+    height: 30px;
+    width: 200px;
+    font-size: 20px;
+    font-weight: 900;
+    background-color: rgb(255, 189, 114);
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease-in-out;
+}
+
+.bouton:hover {
+    background-color: #928075;
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 767px){
+    .fDog {
+            display: none;
+        }
+}
+
+
+@media screen and (min-width: 768px) {
+    .form__back {
+        min-height: 700px;
+    }
+
+    .form__front {
+        flex-direction: row;
+        height: 700px;
+    }
+
+    .form__l {
+        width: 45%;
+        height: 700px;
+        padding: 3%;
+    }
+
+    .form__r {
+        width: 55%;
+        height: 700px;
+    }
+
+    .lab,
+    .contact__sousTitre {
+        font-size: 30px;
+    }
+
+    .champs {
+        font-size: 22px;
+    }
+
+    .demande {
+        height: 100px;
+    }
+
+    .bouton {
+        height: 50px;
+    }
+
+    .fDog{
+        width: 270px;
+    }
+}

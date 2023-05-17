@@ -1,0 +1,225 @@
+.presentation-container {
+    background-image: url('../../images/source/fondFormulaire.jpg');
+    height: 100%;
+}
+
+.presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 130px 0 50px;
+    min-height: 100vh;
+    max-width: 1000px;
+    width: 90%;
+}
+
+.profilNinon {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 50px;
+    padding: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    width: 100%;
+    background-color: rgb(255, 226, 214);
+}
+
+.imgNinon {
+    height: 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    width: 340px;
+    object-fit: cover;
+}
+
+.chien {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carousel-container {
+    position: relative;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    background-color: black;
+    padding: 5px 15px;
+}
+
+.carousel-button:hover {
+    color: #ccc;
+}
+
+.carousel-button:first-child {
+    left: 10px;
+}
+
+.carousel-button:last-child {
+    right: 10px;
+}
+
+.chien-carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.chien-container {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    gap: 50px;
+    padding: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    background-color: rgb(255, 226, 214);
+    width: 100%;
+}
+
+.chien-carousel {
+    position: relative;
+    height: 400px;
+}
+
+.chien-description {
+    width: 500px;
+    text-align: center;
+}
+
+.chien-description h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.chien-description p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+.maitre-description {
+    text-align: center;
+}
+
+.maitre-description h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.maitre-description p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+@media screen and (max-width: 990px) {
+    .profilNinon {
+        gap: 20px;
+    }
+
+    .chien-container {
+        gap: 20px;
+    }
+
+    .chien-description h3 {
+        font-size: 1.7rem;
+        margin-bottom: 10px;
+    }
+
+    .chien-description p {
+        font-size: 1.3rem;
+        line-height: 1.5;
+    }
+        .maitre-description h2 {
+            font-size: 1.7rem;
+            margin-bottom: 10px;
+        }
+    
+        .maitre-description p {
+            font-size: 1.3rem;
+            line-height: 1.5;
+        }
+    
+        .imgNinon {
+            width: 300px;
+        }
+    
+        .chien-carousel {
+            width: 300px;
+        }
+    
+        .chien-description {
+            width: 400px;
+            text-align: center;
+        }
+    }
+    
+        @media screen and (max-width: 768px) {
+            .profilNinon {
+                flex-direction: column;
+            }
+    
+            .chien-container {
+                flex-direction: column-reverse;
+            }
+    
+            .presentation {
+                width: 90%;
+            }
+    
+            .maitre-description p {
+                max-width: 400px;
+            }
+    
+            .maitre-description {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    
+                @media screen and (max-width: 500px) {
+                    .profilNinon {
+                        min-width: 320px;
+                        width: 95%;
+                    }
+        
+                    .chien-container {
+                        min-width: 320px;
+                        width: 95%;
+                    }
+                    
+                                        .maitre-description {
+                                            width: none;
+                                        }
+                    .maitre-description h2 {
+                        font-size: 1.5rem;
+                        margin-bottom: 8px;
+                    }
+        
+                    .maitre-description p {
+                        font-size: 1.2rem;
+                        line-height: 1.4;
+                    }
+        
+                    .imgNinon {
+                        width: 250px;
+                    }
+        
+                    .chien-carousel {
+                        width: 250px;
+                    }
+        
+                    .chien-description {
+                        width: 300px;
+                        text-align: center;
+                    }
+                }
