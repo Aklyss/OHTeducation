@@ -1,25 +1,78 @@
-main {
+.accueil {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: calc(100vh - 120px);
 }
 
-.fondChienMain {
-    width: 100%;
+.accueil_presentation {
+    background-color: #f5f5f5;
+    padding: 50px;
+    text-align: center;
+}
+
+.accueil_titre {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.accueil_titre h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.accueil_titre p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    background-color: #ff8c00;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+    background-color: #e36900;
+}
+
+.accueil_section {
+    background-color: #fff;
+    padding: 50px;
+    text-align: center;
+}
+
+.accueil_section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.accueil_cards {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
-.fondChien {
-    object-fit: cover;
-    width: 100vw;
-    min-height: calc(100vh - 120px);
+.accueil_card {
+    flex-basis: 30%;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    text-align: center;
 }
 
-.citation {
-    position: absolute;
-    bottom: 150px;
-    color: white;
+.accueil_card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.accueil_card p {
+    font-size: 1.2rem;
+    line-height: 1.5;
 }
