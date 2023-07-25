@@ -39,10 +39,14 @@ export default function Presentation() {
     };
 
     return (
-        <main className="presentation-container" data-barba="container" data-barba-namespace="tarif">
+        <main>
+            <div className='header_titre'>
+                <h1>Présentation</h1>
+            </div>
+        <div className="presentation-container" data-barba="container" data-barba-namespace="tarif">
             <div className="presentation">
                 <div className='profilNinon'>
-                <img className='imgNinon' src={Ninon}/>
+                <img className='imgNinon' src={Ninon} alt='Ninon Darques éducatrice canin'/>
                 <div className="maitre-description">
                     <h2>Ninon Darques</h2>
                     <p>
@@ -55,14 +59,14 @@ export default function Presentation() {
                 </div>
                 <div className='chien-container'>
                 <div className="chien-carousel">
-                        <button className="carousel-button previous" onClick={handlePrevious}><i className="fa-sharp fa-regular fa-chevron-left"></i></button>
+                        <button className="carousel-button previous" onClick={handlePrevious}><i className="fa-solid fa-circle-chevron-left"></i></button>
                     <img src={images[currentIndex].src} alt={images[currentIndex].alt} className="chien-image" />
-                    <button className="carousel-button next" onClick={handleNext}>{'>'}</button>
+                        <button className="carousel-button next" onClick={handleNext}><i className="fa-solid fa-circle-chevron-right"></i></button>
                 </div>
                 <div className="chien-description">
-                    <h3>Tessa</h3>
+                    <h2>Tessa</h2>
                     <p>
-                        Tessa est née le 08/04/2022, c’est une Aldeutcher Shaferhunde qui provient d’un grand élevage. Cette race est peu
+                        Tessa est née le 08/04/2022, c’est une <span className="hover-text">Aldeutcher Shaferhunde*<span className="tooltip-text">L’aldeutcher shaferhunde aussi appelé ancien type de berger allemand. Il s’agit donc d’une acienne race de berger allemand rustique avec les poils longs et le dos droit.</span></span> qui provient d’un grand élevage. Cette race est peu
                         connue mais elle ressemble beaucoup au Berger Allemand. Tessa est très vive et joueuse, mais elle est aussi très
                         bien éduquée. Elle continue d'apprendre beaucoup en raison de son jeune âge, mais dans un an, elle sera prête à
                         travailler avec moi pour aider vos loulous. Elle peut être sociable et apprendre plein d'autres choses. Elle est
@@ -71,6 +75,7 @@ export default function Presentation() {
                 </div>
                 </div>
             </div>
+        </div>
         </main>
     );
 }

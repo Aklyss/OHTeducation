@@ -1,26 +1,21 @@
 .form__back {
-    width: 100vw;
-    height: calc(100vh - 120px);
-    background-image: url("../../images/source/fondFormulaire.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    width: 100%;
+    min-height: calc(100vh - 235px);
+    background: #F9E4D9;
+    min-height: calc(100vh - 235px);
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
 .form__front {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    background-color: #faf0e7;
-    margin-top: 60px;
-    margin-bottom: 10px;
-    max-width: 1100px;
-    min-width: 300px;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 1);
+    background-color: white;
     width: 80%;
+    animation: droite 1s ease-in-out both;
 }
 
 .form__l {
@@ -29,9 +24,11 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 45%;
+    height: 100%;
+    min-height: 672px;
     padding: 3%;
-    background-color: rgb(255, 209, 157);
+    background-color: #EEBEAA;
+    box-shadow: 1px 0 0px rgba(0, 0, 0, 0.3);
 }
 
 .form__l h1{
@@ -41,7 +38,6 @@
 
 .form__r {
     width: 100%;
-    height: 55%;
     padding: 2%;
     display: flex;
     flex-direction: column;
@@ -52,7 +48,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 20px;
+    font-size: 30px;
     margin-bottom: 20px;
 }
 
@@ -60,86 +56,64 @@
     font-size: 30px;
 }
 .contact__par {
-    font-size: 20px;
+    font-size: 30px;
     margin-bottom: 20px;
 }
 
 .champs {
-    width: 300px;
-    height: 30px;
+    max-width: 400px;
+    width: 100%;
+    max-height: 40px;
     max-width: 80%;
     padding: 5px;
     font-size: 18px;
 }
 
 .demande {
-    height: 60px;
+    min-height: 70px;
     resize: none;
 }
 
+.fDog {
+    max-width: 400px;
+    width: 80%;
+
+}
+
 .bouton {
-    margin-top: 10px;
-    height: 30px;
+    margin: 10px 0;
+    height: 60px;
     width: 200px;
     font-size: 20px;
     font-weight: 900;
-    background-color: rgb(255, 189, 114);
+    background-color: #EEBEAA;
     border: none;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     transition: transform 0.2s ease-in-out;
 }
 
 .bouton:hover {
-    background-color: #928075;
-    transform: scale(1.05);
+    background-color: #F9E4D9;
+    transform: scale(1.02);
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 839px){
     .fDog {
             display: none;
         }
-}
-
-
-@media screen and (min-width: 768px) {
-    .form__back {
-        min-height: 700px;
+    .form__front{
+        flex-direction: column;
+        width: 100%;
     }
-
-    .form__front {
-        flex-direction: row;
-        height: 700px;
-    }
-
-    .form__l {
-        width: 45%;
-        height: 700px;
-        padding: 3%;
-    }
-
-    .form__r {
-        width: 55%;
-        height: 700px;
-    }
-
-    .lab,
-    .contact__sousTitre {
-        font-size: 30px;
-    }
-
-    .champs {
-        font-size: 22px;
-    }
-
-    .demande {
-        height: 100px;
-    }
-
-    .bouton {
-        height: 50px;
-    }
-
-    .fDog{
-        width: 270px;
-    }
+        .lab {
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+        .form__front{
+            width: 90%;
+            min-width: 320px;
+        }
+        .form__l{
+            min-height: 500px;
+        }
 }

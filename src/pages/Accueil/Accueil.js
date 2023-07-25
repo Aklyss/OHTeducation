@@ -1,18 +1,25 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Accueil.css';
 
 const Accueil = () => {
     return (
-        <div className="accueil">
+        <main className="accueil">
+            <section className='accueil_banniere'>
+                <div className='banniere_chien'>
+                    <h1 className="Citation1 typing_animation">« Tout le monde pense qu’ils ont le meilleur chien et ils ont tous raison. » – W.R. Purche</h1>
+                </div>
+            </section>
             <section className="accueil_presentation">
+                <div>
                 <div className="accueil_titre">
                     <h2>Bienvenue chez OHT Education</h2>
                     <p>Améliorez la relation avec votre chien grâce à nos services d'éducations canins professionnels.</p>
-                    <a href="#contact" className="cta-button">Prendre rendez-vous</a>
+                        <Link to="/contact" className="cta-button"><li>Prendre rendez-vous</li></Link>
                 </div>
-            </section>
+                </div>
 
-            <section className="accueil_section">
+            <div className="accueil_section">
                 <h2>Nos Services</h2>
                 <div className="accueil_cards">
                     <div className="accueil_card">
@@ -28,8 +35,9 @@ const Accueil = () => {
                         <p>Résolvez les problèmes de comportement tels que l'agressivité, l'anxiété, les aboiements excessifs, etc.</p>
                     </div>
                 </div>
+            </div>
             </section>
-        </div>
+        </main>
     )
 }
 

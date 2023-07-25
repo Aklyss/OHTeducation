@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './Prestation.css';
-import fontTarif from '../../images/source/fontTarif.jpeg'
 import { Link } from 'react-router-dom'
 
 const prestationsData = [
@@ -47,11 +46,18 @@ function Prestation() {
 
     return (
         <main className='containerAll'>
+            <div className='header_titre'>
+                <h1>Prestation</h1>
+            </div>
+            <section className='prestation_banniere'>
+                <div className='banniere_chien2'>
+                </div>
+            </section>
         <div className="prestation-container">
             <div className="prestation-cards">
                 {prestationsData.map((prestation) => (
                     <div
-                        className="prestation-card"
+                        className="prestation-card hoverCard"
                         key={prestation.id}
                         onClick={() => handlePrestationClick(prestation)}
                     >
@@ -61,12 +67,15 @@ function Prestation() {
                         <button>Voir plus</button>
                     </div>
                 ))}
-                <Link to="/contact" className='lienContact'>Me Contacter</Link>
+                
             </div>
+                <div className='bouton_contact'>
+                    <Link to="/contact" className='lienContact'>Me Contacter</Link>
+                </div>
             {selectedPrestation && (
                 <div className="prestation-details">
                     <button className="close-button" onClick={handleDetailsClose}>
-                        X
+                            <i className="fa-solid fa-square-xmark"></i>
                     </button>
                     <h2>{selectedPrestation.title}</h2>
                     <p className="prestation-content">{selectedPrestation.details}</p>

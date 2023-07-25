@@ -5,9 +5,9 @@ import Burger from '../Burger/Burger'
 import Navbar from '../Navbar/Navbar'
 
 const Header = () => {
-
     return (
         <header>
+            <div className='header'>
             <div className="header__box">
                 <img className="header__logo" src={Logo} alt="Logo de OHT éducation" />
                 <h1 className='title'>OHT EDUCATION</h1>
@@ -16,6 +16,7 @@ const Header = () => {
                 <Navbar />
                 <Burger />
             </nav>
+            </div>
         </header>
     );
 }

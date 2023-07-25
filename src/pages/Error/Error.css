@@ -2,9 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #bda4a4;
-    background: linear-gradient(70deg, #ecc5c5, rgb(230, 194, 174));
-    padding: 50px 0;
+    background-color: #EEBEAA;
+    min-height: calc(100vh - 120px);
 }
 
 .container {
@@ -12,11 +11,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 8px;
-    background-color: #f4f4f4;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    background-color: #ffffff;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 1);
     text-align: center;
-    padding: 20px;
+    padding: 40px;
     margin-top: 60px;
 }
 
@@ -25,8 +23,7 @@
 }
 
 .container h1 {
-    font-size: 10rem;
-    color: rgb(255, 189, 114);
+    color: #EEBEAA;
     font-size: 15rem;
 }
 
@@ -37,10 +34,9 @@
 }
 
 .container button {
-    background-color: rgb(255, 189, 114);
-    color: #fff;
+    background-color: #EEBEAA;
+    color: black;
     border: none;
-    border-radius: 0.5rem;
     padding: 1rem 2rem;
     font-size: 2rem;
     cursor: pointer;
@@ -50,6 +46,19 @@
 }
 
 .container button:hover {
-    background-color: rgb(122, 101, 101);
+    background-color: #F9E4D9;
+}
+
+@media screen and (max-width: 500px) {
+    .container h1 {
+            color: #EEBEAA;
+            font-size: 8rem;
+        }
+    .container button {
+            font-size: 1.5rem;
+        }
+                .bDog {
+                    width: 200px;
+                }
 }
 

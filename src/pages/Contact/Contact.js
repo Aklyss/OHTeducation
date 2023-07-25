@@ -7,8 +7,7 @@ import emailjs from 'emailjs-com';
 export default function Contact() {
     function sendEmail(e) {
         e.preventDefault();
-
-        emailjs.sendForm('service_OHT', 'template_mpt88yq', e.target, 'JnkXDThErcxhVVyDr')
+        emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, e.target, process.env.REACT_APP_USER_ID)
             .then((result) => {
                 console.log(result.text);
             }, (error) => {
@@ -17,6 +16,9 @@ export default function Contact() {
     }
     return (
         <main data-barba="container" data-barba-namespace="tarif">
+            <div className='header_titre'>
+                <h1>Contact</h1>
+            </div>
             <div className="form__back">
                 <section className="form__front">
                     <div className="form__l">
@@ -36,11 +38,11 @@ export default function Contact() {
                     <form method="post" className="form__r" onSubmit={sendEmail}>
                         <div className="name">
                             <div className='lab'>
-                                <label htmlFor="lastName">Nom:</label>
+                                <label htmlFor="lastName">Nom:*</label>
                                 <input type="text" id="lastName" name="lastName" className="champs" placeholder='Exemple: Dupont'/>
                             </div>
                             <div className='lab'>
-                                <label htmlFor="firstName">Prénom:</label>
+                                <label htmlFor="firstName">Prénom:*</label>
                                 <input type="text" id="firstName" name="firstName" className="champs" placeholder='Exemple: Jean' />
                             </div>
                         </div>
@@ -49,13 +51,14 @@ export default function Contact() {
                             <input type="email" id="email" name="email" className="champs" placeholder='Exemple: JeanDupont@gmail.fr' />
                         </div>
                         <div className='lab'>
-                            <label htmlFor="phone">Téléphone:</label>
+                            <label htmlFor="phone">Téléphone:*</label>
                             <input type="tel" id="phone" name="phone" className="champs" placeholder='xx.xx.xx.xx.xx' />
                         </div>
                         <div className='lab'>
-                            <label htmlFor="message">Demande:</label>
+                            <label htmlFor="message">Demande:*</label>
                             <textarea id="message" name="message" className="champs demande" placeholder='Bonjour, je vous contact au sujet de ...'></textarea>
                         </div>
+                        <p>*Champs obligatoires</p>
                         <div><input type="submit" value="Envoyer" className="bouton" /></div>
                     </form>
                 </section>
