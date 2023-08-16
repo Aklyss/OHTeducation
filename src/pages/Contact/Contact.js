@@ -37,18 +37,34 @@ const MyForm = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        if (!emailRegex.test(email)) {
-            setIsValidEmail(false);
-        } else {
-            setIsValidEmail(true);
+        // Vérification de tous les champs
+        if (
+            isValidLastName &&
+            isValidFirstName &&
+            emailRegex.test(email) &&
+            phoneRegex.test(phone) &&
+            message.trim() !== ''
+        ) {
+            // Tous les champs sont valides, envoyer le formulaire
+            setIsValidEmail(true); // Réinitialiser l'état de la validation de l'e-mail
             emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, e.target, process.env.REACT_APP_USER_ID)
                 .then((result) => {
                     console.log(result.text);
                 }, (error) => {
                     console.log(error.text);
                 });
+            alert('Le mail a bien été envoyé');
+        } else {
+            // Afficher les messages d'erreur pour les champs invalides ou vides
+            setIsValidLastName(nameRegex.test(lastName));
+            setIsValidFirstName(nameRegex.test(firstName));
+            setIsValidEmail(emailRegex.test(email));
+            setIsValidPhone(phoneRegex.test(phone));
+            setMessage(message.trim() !== '');
+            alert('Veuillez vérifier que tous les champs sont bien remplis');
         }
     };
+
     return (
         <main data-barba="container" data-barba-namespace="tarif">
             <div className='header_titre'>
